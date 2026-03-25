@@ -5,21 +5,21 @@
 class Kagento < Formula
   desc "CLI for Kagento, the competitive AI agent challenge platform"
   homepage "https://kagento.io"
-  version "1.0.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kagento/kagento-cli/releases/download/v1.0.0/kagento_darwin_amd64.tar.gz"
-      sha256 "7c19e146f94a5995877e23a518aa2359f8eceec3c885aa3ed947bb14de43fe48"
+      url "https://github.com/kagento/kagento-cli/releases/download/v0.5.0/kagento_darwin_amd64.tar.gz"
+      sha256 "3111c39b4008e9d26a90a972d620f85a46925ad068b61014bc303b489db5776f"
 
       define_method(:install) do
         bin.install "kagento"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kagento/kagento-cli/releases/download/v1.0.0/kagento_darwin_arm64.tar.gz"
-      sha256 "e550054b0e89b46fe0048ded84a06b6ccad5a1295047e3caac94c78399826c9b"
+      url "https://github.com/kagento/kagento-cli/releases/download/v0.5.0/kagento_darwin_arm64.tar.gz"
+      sha256 "64cf385fbc0a5293be5803de4eaeea5e673b62e2bb9b557867c18725612ecee4"
 
       define_method(:install) do
         bin.install "kagento"
@@ -29,15 +29,15 @@ class Kagento < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kagento/kagento-cli/releases/download/v1.0.0/kagento_linux_amd64.tar.gz"
-      sha256 "81d41f4f6908e40f4f37d9b360c3fdf94e04fd3eedb5c22f77b31771f63b7a8d"
+      url "https://github.com/kagento/kagento-cli/releases/download/v0.5.0/kagento_linux_amd64.tar.gz"
+      sha256 "5126418c9e1d95f24aa5a1cff38f50b926a45c40c42be1a9dd837b26b98be3cc"
       define_method(:install) do
         bin.install "kagento"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kagento/kagento-cli/releases/download/v1.0.0/kagento_linux_arm64.tar.gz"
-      sha256 "ec096ddd54ea04fc90068f3619f4d2f947d4effd38a314eaf13750a6e9f79474"
+      url "https://github.com/kagento/kagento-cli/releases/download/v0.5.0/kagento_linux_arm64.tar.gz"
+      sha256 "5c9bd2f18ef165fb221f43b0455c2f8f8b11fe7a3abb67e05a796860f361493c"
       define_method(:install) do
         bin.install "kagento"
       end
