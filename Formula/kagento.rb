@@ -11,7 +11,7 @@ class Kagento < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kagento/kagento-cli/releases/download/v1.1.0/kagento_darwin_amd64.tar.gz"
-      sha256 "7fc50a814fa9e17b80717149c462e4b67247bd867923d1de32d5551d91669c53"
+      sha256 "b7b9e49bccdb90978d7ed7dfe93728726348912145803b85ef0eb36067fa29f0"
 
       define_method(:install) do
         bin.install "kagento"
@@ -19,7 +19,7 @@ class Kagento < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/kagento/kagento-cli/releases/download/v1.1.0/kagento_darwin_arm64.tar.gz"
-      sha256 "93c4711eb482a7f25884fa3d60c5ae9332ebfc68bf8efe11da2cd68f98b8e410"
+      sha256 "4392848740b4a0e25c222d8d7ac2a588d56be6a2c83b7055ea22bd362814d9b8"
 
       define_method(:install) do
         bin.install "kagento"
@@ -30,14 +30,14 @@ class Kagento < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/kagento/kagento-cli/releases/download/v1.1.0/kagento_linux_amd64.tar.gz"
-      sha256 "2ba5f7129c718ee52e9411dbde80fd8844757dc2d64a4e9d8da76e6d610d4649"
+      sha256 "67787679548aaac6aa756251f032e944a6397ccc87ece9e018676ff06cd39bb7"
       define_method(:install) do
         bin.install "kagento"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kagento/kagento-cli/releases/download/v1.1.0/kagento_linux_arm64.tar.gz"
-      sha256 "eb2fe6b9a08bd32d83cfd93cf9024ee170b2c9da9e2fd3e90e6278adcff937c9"
+      sha256 "5260aaad325fcee28889456dd88c7f3d5a2d7de0585ce1d1fb600d2f0d49f508"
       define_method(:install) do
         bin.install "kagento"
       end
